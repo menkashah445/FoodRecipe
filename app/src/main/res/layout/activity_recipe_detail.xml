@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/orange"
+    tools:context=".RecipeDetailActivity">
+
+  <androidx.appcompat.widget.Toolbar
+      app:title="Recipe Details"
+      app:titleTextColor="@color/white"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+         android:orientation="vertical"
+          android:gravity="center">
+        <TextView
+            android:id="@+id/textView_mealName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Recipe Name"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/source"
+           android:id="@+id/textView_mealSource"
+          android:gravity="center"
+          android:padding="8dp"
+          android:textStyle="italic"
+          android:textColor="@color/white"
+          android:textSize="14sp">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+          android:id="@+id/imageView_mealImage"
+          android:layout_margin="8dp"
+          android:scaleType="centerCrop">
+
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/summary"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:textColor="@color/white"
+          android:id="@+id/textView_mealSummary">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:text="Ingredients"
+            android:id="@+id/textView_ingredients"
+
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:textSize="18sp"
+          android:padding="8dp"
+          android:gravity="center">
+
+        </TextView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+           android:id="@+id/meal_ingredients">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+      </LinearLayout>
+    </ScrollView>
+
+  </LinearLayout>
